@@ -23,15 +23,73 @@ namespace Cinema_be_s3_l3
                 string query1 = "select count(*) from Spettatore where Sala='rossa'"  ;
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
+
                 cmd.CommandText = query1;
                 SqlDataReader reader = cmd.ExecuteReader();
-                
-                showSalaRossa.InnerText ="aaa" + reader.GetString(0);
+                while (reader.Read())
+                {
+                    int countRossa = reader.GetInt32(0); 
+                    showSalaRossa.InnerText = countRossa.ToString(); 
+                }
                 
             }
             catch(Exception ex) 
             {
                 showSalaRossa.InnerText=ex.Message;
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            try
+            {
+                conn.Open(); //apriamo la connessione
+
+                string query1 = "select count(*) from Spettatore where Sala='verde'";
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+
+                cmd.CommandText = query1;
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    int countVerde = reader.GetInt32(0);
+                    showSalaVerde.InnerText = countVerde.ToString();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                showSalaVerde.InnerText = ex.Message;
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            try
+            {
+                conn.Open(); //apriamo la connessione
+
+                string query1 = "select count(*) from Spettatore where Sala='blu'";
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+
+                cmd.CommandText = query1;
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    int countBlu = reader.GetInt32(0);
+                    showSalablu.InnerText = countBlu.ToString();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                showSalablu.InnerText = ex.Message;
 
             }
             finally

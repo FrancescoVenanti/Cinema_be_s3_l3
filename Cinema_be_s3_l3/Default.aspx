@@ -23,12 +23,12 @@
             <p id="showSalaRossa" runat="server"></p>
         </div>
 
-        <div id="showSalaVerde" class="border border-success p-3">
+        <div class="border border-success p-3">
             <p>Stanza Verde</p>
             <p id="showSalaVerde" runat="server"></p>
         </div>
 
-        <div id="showSalaBlu" class="border border-primary p-3">
+        <div class="border border-primary p-3">
             <p>Stanza Blu</p>
             <p id="showSalablu" runat="server"></p>
         </div>

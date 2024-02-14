@@ -122,7 +122,9 @@ namespace Cinema_be_s3_l3
                 conn.Open(); //apriamo la connessione
 
                 string query = "INSERT INTO Spettatore (Nome, Cognome, Sala,Ridotto) VALUES (@Nome, @Cognome, @Sala, @Ridotto)";
-                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@Nome", nome.Text);
                 cmd.Parameters.AddWithValue("@Cognome", cognome.Text);
                 cmd.Parameters.AddWithValue("@Sala", sceltaSala.Text);

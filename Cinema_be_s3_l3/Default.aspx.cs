@@ -29,7 +29,11 @@ namespace Cinema_be_s3_l3
                 while (reader.Read())
                 {
                     int countRossa = reader.GetInt32(0); 
-                    showSalaRossa.InnerText = countRossa.ToString(); 
+                    showSalaRossa.InnerText = countRossa.ToString();
+                    if (countRossa > 119)
+                    {
+                        listRossa.Enabled = false;
+                    }
                 }
                 
             }
@@ -57,6 +61,11 @@ namespace Cinema_be_s3_l3
                 {
                     int countVerde = reader.GetInt32(0);
                     showSalaVerde.InnerText = countVerde.ToString();
+
+                    if (countVerde > 119)
+                    {
+                        listVerde.Enabled = false;
+                    }
                 }
 
             }
@@ -84,6 +93,11 @@ namespace Cinema_be_s3_l3
                 {
                     int countBlu = reader.GetInt32(0);
                     showSalablu.InnerText = countBlu.ToString();
+
+                    if (countBlu > 119)
+                    {
+                        listBlu.Enabled = false;
+                    }
                 }
 
             }

@@ -42,6 +42,33 @@ namespace Cinema_be_s3_l3
         protected global::System.Web.UI.WebControls.DropDownList sceltaSala;
 
         /// <summary>
+        /// Controllo listRossa.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListItem listRossa;
+
+        /// <summary>
+        /// Controllo listBlu.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListItem listBlu;
+
+        /// <summary>
+        /// Controllo listVerde.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListItem listVerde;
+
+        /// <summary>
         /// Controllo ridotto.
         /// </summary>
         /// <remarks>

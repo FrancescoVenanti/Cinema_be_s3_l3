@@ -7,9 +7,9 @@
         <asp:TextBox ID="nome" runat="server" placeholder="nome"></asp:TextBox>
         <asp:TextBox ID="cognome" runat="server" placeholder="cognome"></asp:TextBox>
         <asp:DropDownList ID="sceltaSala" runat="server" class="my-2">
-                        <asp:ListItem Text="Sala rossa" Value="rossa"></asp:ListItem>
-                        <asp:ListItem Text="Sala blu" Value="blu"></asp:ListItem>
-                        <asp:ListItem Text="Sala verde" Value="verde"></asp:ListItem>
+                        <asp:ListItem Text="Sala rossa" Value="rossa" ID="listRossa"></asp:ListItem>
+                        <asp:ListItem Text="Sala blu" Value="blu" id="listBlu"></asp:ListItem>
+                        <asp:ListItem Text="Sala verde" Value="verde" id="listVerde"></asp:ListItem>
         </asp:DropDownList>
         <br />
         <asp:CheckBox ID="ridotto" runat="server" text="Ridotto"/>
